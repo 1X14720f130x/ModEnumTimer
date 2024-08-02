@@ -142,8 +142,6 @@ extern "C" NTSTATUS DriverEntry( PDRIVER_OBJECT DriverObject , PUNICODE_STRING R
 		// Handle already inserted timer
 		if ( AlreadyInserted ) {
 
-			KeCancelTimer( g_Timer );
-
 			ExFreePool( g_Timer );
 			ExFreePool( g_Dpc );
 
